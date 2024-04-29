@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
   <!-- OG -->
   <meta property="og:type" content="website" />
@@ -28,10 +28,12 @@
     </div>
 
     <!-- FOOTER -->
-    <div class="col center footer">
-      <div class="border"></div>
-      <h3>צור קשר</h3>
-      <a href="https://wa.me/0552562503" target="_blank"><img id="whatsapp" src="whatsapp.svg" alt="" srcset=""></a>
+    <div class="footer">
+      <div class="col center">
+        <div class="border"></div>
+        <h3>צור קשר</h3>
+        <a href="https://wa.me/0552562503" target="_blank"><img id="whatsapp" src="whatsapp.svg" alt="" srcset=""></a>
+      </div>
     </div>
   </main>
 </body>
@@ -85,7 +87,10 @@
   }
 
   .footer {
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
 
   .footer .border {
@@ -97,6 +102,24 @@
   #whatsapp {
     width: 2em;
     margin: 0 1em;
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.5em;
+    }
+
+    h2 {
+      font-size: 1em;
+    }
+
+    .profile {
+      max-width: 5em;
+    }
+
+    .footer .border {
+      width: 20em;
+    }
   }
 </style>
 
